@@ -36,49 +36,50 @@ Halo为企业应用服务平台提供一套“开箱即用”的统一开发与�
   * b）基于zookeeper的心跳服务。
   * c）基于flyway，maven，zookeeper，检查数据库与应用节点的程序版本一致性。
 
-**4. 新增应用代码工程：xxx-db**
 
-* a）使用flyway管理数据库脚本版本基线。
+  **4. 新增应用代码工程：xxx-db**
+
+  * a）使用flyway管理数据库脚本版本基线。
 
   **5. 新增扩展组件：batch-trigger**
 
-* a）基于http，MQ的批作业触发器组件封装。
+  * a）基于http，MQ的批作业触发器组件封装。
 
   **6. 新增扩展组件：batch-admin**
 
-* a）围绕spring-batch做的批作业监控与管理组件。
+  * a）围绕spring-batch做的批作业监控与管理组件。
 
   **7. 新增扩展组件：batch-admin**
 
-* a）围绕spring-batch做的批作业监控与管理组件。
+  * a）围绕spring-batch做的批作业监控与管理组件。
 
   **8. 新增扩展组件：dbversion-checker**
 
-* a）读取数据库基线的版本号
+  * a）读取数据库基线的版本号
 
   **9. 新增扩展组件：session-router**
 
-* a）用于对会话缓存的路由分离。
+  * a）用于对会话缓存的路由分离。
 
   **10. 新增扩展组件：auth-classic**
 
-* a）halo-auth扩展，基于oauth2的授权认证组件。
+  * a）halo-auth扩展，基于oauth2的授权认证组件。
 
   **10. 新增扩展组件：auth-classic**
 
-* a）halo-auth扩展，基于oauth2的授权认证组件。
+  * a）halo-auth扩展，基于oauth2的授权认证组件。
 
   **11. 新增扩展组件：auth-oauth2-authorizeserver**
 
-* a）halo-auth扩展，基于oauth2的授权认证组件。
+  * a）halo-auth扩展，基于oauth2的授权认证组件。
 
   **12. 新增扩展组件：auth-oauth2-resourceserver**
 
-* a）halo-auth扩展，基于oauth2的资源访问组件。
+  * a）halo-auth扩展，基于oauth2的资源访问组件。
 
   **13. 新增扩展组件：health-checker**
 
-* a）用于外部代理服务器或负载均衡服务的健康检查服务。
+  * a）用于外部代理服务器或负载均衡服务的健康检查服务。
 
 ## 文档说明
 
