@@ -8,4 +8,5 @@
 * [05.服务幂等性支持](05fu-wu-mi-deng-xing-zhi-chi.md)
 * [06.Web交互](06webjiao-hu.md)
 * [07.认证与授权](07ren-zheng-yu-shou-quan.md)
+* [08.数据库访问](08shu-ju-ku-fang-wen.md)
 
