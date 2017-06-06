@@ -14,4 +14,5 @@
 * [11.批作业管理](11pi-zuo-ye-guan-li.md)
 * [12.统一配置中心](12tong-yi-pei-zhi-zhong-xin.md)
 * [13.应用健康检查](13ying-yong-jian-kang-jian-cha.md)
+* [14.版本检查](14ban-ben-jian-cha.md)
 
