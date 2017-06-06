@@ -20,4 +20,5 @@
 * [17.交易链管理](17jiao-yi-lian-guan-li.md)
 * [18.日志格式规范](18ri-zhi-ge-shi-gui-fan.md)
 * [19.数据转换和校验](19shu-ju-zhuan-huan-he-xiao-yan.md)
+* [20.其他功能](20qi-ta-gong-neng.md)
 
