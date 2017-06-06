@@ -12,4 +12,5 @@
 * [09.文件管理](09wen-jian-guan-li.md)
 * [10.缓存管理](10huan-cun-guan-li.md)
 * [11.批作业管理](11pi-zuo-ye-guan-li.md)
+* [12.统一配置中心](12tong-yi-pei-zhi-zhong-xin.md)
 
