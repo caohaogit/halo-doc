@@ -96,23 +96,23 @@ Halo为企业应用服务平台提供一套“开箱即用”的统一开发与�
 
 ## 技术概况
 
-![](/assets/02.技术概况.png)
+[![](http://i.imgur.com/mjYfLZL.png)](http://i.imgur.com/mjYfLZL.png)
 
 ## 服务应用
 
-![](/assets/03.服务应用.png)
+[![](http://i.imgur.com/ciFrb3D.png)](http://i.imgur.com/ciFrb3D.png)
 
 ## 批作业应用
 
-![](/assets/04.批作业应用.png)
+[![](http://i.imgur.com/Nc9nzTR.png)](http://i.imgur.com/Nc9nzTR.png)
 
 ## Web交互应用
 
-![](/assets/05.Web交互应用.png)
+[![](http://i.imgur.com/sENriqm.png)](http://i.imgur.com/sENriqm.png)
 
 ## 工程结构
 
-![](/assets/06.工程结构.png)
+[![](http://i.imgur.com/Gch9BIr.png)](http://i.imgur.com/Gch9BIr.png)
 
 ## 配置清单
 
