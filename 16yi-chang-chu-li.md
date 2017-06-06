@@ -1,0 +1,70 @@
+## 异常处理
+
+框架从两个角度对异常处理进行细化，一是异常信息的传递链路，二是异常信息的展示格式。
+
+### 传递链
+
+在框架内部，异常信息会在各个代码层级上向上抛出。最终会将异常信息汇集并封装入com.halo.core.message.model. ResponseMessage反馈至前端交互界面。因此，建议开发者在开发功能代码时，也尽量不要“吞掉”任何有业务含义的异常。  
+在整个异常处理链中，框架已经在“服务调用”，“Web交互”，“DAO操作”几个切入点进行了异常统一拦截，保证抛出的任何可能的异常都有能力完整的向上抛出。切面服务（com.halo.core.log. LoggingAdvice）面向开发者开放。  
+框架默认已经拦截所有com._._.dao包下的代码所能抛出的异常，并自动查找类中定义的logger对象（Logger logger = LoggerFactory.getLogger\(“XXX”\);）,将异常信息输出到logger对象中。  
+如果开发者想对新的类或包路径等进行切面日志拦截，需在对应的applicationContext-\*.xml文件中添加如下配置：  
+
+
+```xml
+<aop:config>
+    <aop:aspect id="XXXloggingAspect" ref="loggingAdvice" order="1">
+        <aop:pointcut id="loggingPointcut" expression="aop表达式"/>
+        <aop:after-throwing method="afterThrowing" pointcut-ref="loggingPointcut" throwing="throwable"/>
+    </aop:aspect>
+</aop:config>
+```
+
+### 信息格式
+
+框架内部对于一些常见异常类型进行识别，从而与最终反馈至Web前端界面的com.halo.core.message.model. ResponseMessage对象的消息代码（messageCode）进行了映射，从而可以让开发者和后续维护人员更快捷的初步定为问题。
+
+| 消息编号 | 异常类型 | 前端展示消息内容 |
+| :--- | :--- | :--- |
+| 0000 | 默认成功 | 处理成功 |
+| 9999 | 默认失败 | 执行失败 |
+| 0003 | NullPointerException | 出现空值错误 |
+| 0004 | SQLException | 数据库操作失败 |
+| 0005 | FileNotFoundException | 找不到文件 |
+| 0006 | TokenInvalidException | 用户认证失败 |
+| 0007 | ConnectException | 连接被重置 |
+| 0008 | ValidateException | 数据校验失败 |
+| 0009 | CacheOperationException | 缓存操作失败 |
+| 0010 | FileAccessException | 文件访问失败 |
+| 0011 | UnauthorizedException | 用户无权访问 |
+| 0012 | IdempotentException | 幂等性验证失败 |
+| 2001 | WebServiceException | SOAP服务调用失败 |
+| 2002 | ProcessingException | RESTful服务调用失败 |
+| 2003 | SOAPFaultException | SOAP服务调用失败 |
+| 2011 | Fault | 服务执行失败 |
+| 3000 | BusinessException |  |
+| 1001 | ClassNotFoundException |  |
+| 1002 | NoSuchMethodException |  |
+| 1003 | IllegalArgumentException |  |
+| 1004 | NumberFormatException |  |
+| 1005 | IndexOutOfBoundsException |  |
+| 1006 | UnsupportedClassVersionError |  |
+| 1007 | JspException |  |
+
+除了默认的异常类型与消息编号外，框架为开发者一种能够定制消息代码的方式。所有开发者抛出的业务异常类型为com.halo.core.exception.BusinessException，开发者可以通过向webconfig.properties文件中添加web.message.business.XXXX属性来定义新的消息编号与消息文本。例如：
+
+```properties
+web.message.business.0001=任务队列获取失败（测试）
+```
+
+在具体的业务代码中使用时，可以显式的抛出异常，例如：
+
+```java
+@RequestMapping(value = "/business", method = RequestMethod.GET)
+@ResponseMessage
+public boolean raiseBusinessException() {
+    throw new BusinessException("0001");
+}
+```
+
+这样，在浏览器端所看到的消息内容则为：任务队列获取失败（测试）
+
