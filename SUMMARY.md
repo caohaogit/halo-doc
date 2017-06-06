@@ -22,4 +22,5 @@
 * [19.数据转换和校验](19shu-ju-zhuan-huan-he-xiao-yan.md)
 * [20.其他功能](20qi-ta-gong-neng.md)
 * [21.重要扩展插件](21zhong-yao-kuo-zhan-cha-jian.md)
+* [22.附1：框架内置的REST服务清单](22fu-1-ff1a-kuang-jia-nei-zhi-de-rest-fu-wu-qing-dan.md)
 
