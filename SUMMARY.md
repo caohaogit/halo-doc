@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [First Chapter](chapter1.md)
 * [01.配置清单](/01.配置清单.md)
 * [02.Spring集成](/02.Spring集成.md)
 * [03.服务集成](/03.服务集成.md)
@@ -24,6 +23,4 @@
 * [20.其他功能](/20.其他功能.md)
 * [21.重要扩展插件](/21.重要扩展插件.md)
 * [22.附1：框架内置的REST服务清单](/22.附1：框架内置的REST服务清单.md)
-
-
 
