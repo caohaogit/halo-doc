@@ -3,6 +3,7 @@
 * [介绍](README.md)
   * [体系结构](体系结构.md)
   * [组件清单](zu-jian-qing-dan.md)
+  * [配置清单](pei-zhi-qing-dan.md)
 * [01.版本记录](/01.版本记录.md)
 * [03.配置清单](/03.配置清单.md)
 * [04.Spring集成](/04.Spring集成.md)
