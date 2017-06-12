@@ -17,7 +17,6 @@ Halo为企业应用服务平台提供一套“开箱即用”的统一开发与�
 
 请使用Halo框架的应用系统开发者为halo框架的推广做出一点点贡献。在您系统界面适当的位置添加Halo徽标，并注明“**Powerd By Halo**”。
 
-![](/assets/halo_large.jpg)
 
 ![](/assets/halo_2cm.jpg)
 
