@@ -1,12 +1,12 @@
 # Summary
 
 * [介绍](README.md)
-  * [体系结构](体系结构.md)
-  * [组件清单](zu-jian-qing-dan.md)
-  * [配置清单](pei-zhi-qing-dan.md)
+  * [体系结构](0101.体系结构.md)
+  * [组件清单](0102.组件清单.md)
+  * [配置清单](0103.配置清单.md)
 * [版本记录](/01.版本记录.md)
 * [Spring集成](/04.Spring集成.md)
-* [服务集成](/05.服务集成.md)
+* [远程服务集成](/05.服务集成.md)
   * [CXF配置](05.服务集成/cxfpei-zhi.md)
   * [SOAP服务集成](05.服务集成/soapfu-wu-ji-cheng.md)
   * [REST服务集成](05.服务集成/restfu-wu-ji-cheng.md)
