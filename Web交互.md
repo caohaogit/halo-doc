@@ -22,7 +22,7 @@ web.session.timeout : session超时时间\[毫秒\]
 2. [@PathVariable](http://localhost:3000/PathVariable)注解
    `UserInfo getUser(@CurrentSession Session session, @PathVariable("id") String userId)`
    与[@RequestMapping](http://localhost:3000/RequestMapping)注解相互配合，指定方法中某个输入参数为url路径上的一个上下文标识。
-   url格式为：[http://XXX/XXX/{userid值](http://xxx/XXX/userid的值)}
+   url格式为：[http://XXX/XXX/{userId值](http://xxx/XXX/userid的值)}
 3. [@RequestJsonParam](http://localhost:3000/RequestJsonParam)注解：方式一
    `UserInfo bindModelFromPostRequestJsonParam(@RequestJsonParam("userInfo") UserInfo userInfo)`
    要求传入特定标识的参数，并且参数值按照json格式序列化。
