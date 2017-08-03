@@ -13,7 +13,7 @@ CXF的整体设计理念是：通过“拦截器”和“总线”两套机制�
 
 #### 总线配置
 
-为了完成框架框架对CXF默认的总线服务做了定制。定制过程是基于Spring XML Configuration的。代码如下：
+为了实现一系列的控制和旁路功能，框架对CXF默认的总线服务做了定制。定制过程是基于Spring XML Configuration的。代码如下：
 
 ```xml
 <cxf:bus>
@@ -22,7 +22,7 @@ CXF的整体设计理念是：通过“拦截器”和“总线”两套机制�
         <ref bean="serviceHeaderInbound"/>
     </cxf:inInterceptors>
     <cxf:outInterceptors>
-	<ref bean="cxfEncodingOutbound"/>
+    <ref bean="cxfEncodingOutbound"/>
         <ref bean="cxfLogOutbound"/>
         <ref bean="serviceHeaderOutbound"/>
     </cxf:outInterceptors>
@@ -46,4 +46,6 @@ CXF的整体设计理念是：通过“拦截器”和“总线”两套机制�
    当CXF出现异常时，控制对异常信息进一步的加工处理。
 4. 编码格式的指定拦截器
    指定当前编码格式“system.encoding=UTF-8”。
+
+
 
