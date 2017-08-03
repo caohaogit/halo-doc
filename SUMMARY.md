@@ -11,6 +11,7 @@
   * [SOAP服务集成](RPC服务集成/SOAP服务集成.md)
   * [REST服务集成](RPC服务集成/REST服务集成.md)
   * [DASC服务集成](RPC服务集成/DASC服务集成.md)
+    * [DASC服务监控](RPC服务集成/DASC服务集成/dascfu-wu-jian-kong.md)
 * [数据序列化与反序列化](/数据序列化与反序列化.md)
 * [服务幂等性支持](/服务幂等性支持.md)
 * [Web交互](/Web交互.md)
