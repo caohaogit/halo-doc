@@ -52,6 +52,7 @@
 ## 批作业管理
 
 * [SpringBatch集成](批作业管理/SpringBatch集成.md)
+* [批作业监控](批作业管理/pi-zuo-ye-jian-kong.md)
 
 ## 增强功能
 
@@ -61,13 +62,4 @@
 ## 附录
 
 * [REST服务清单](附录/REST服务清单.md)
-
-
-
-
-
-
-
-
-
 
