@@ -65,3 +65,39 @@ SoapService soapService;
 // 具体代码实现和调用
 ```
 
+#### JAX-WS规范扩展
+`jaxws`是一套成熟的基于Java语言的WebService注解声明规范，覆盖了SOAP1.1/1.2规范的所有xml控制方法。下面以两个例子来说明对JAXWS的使用。
+
+1. `<![CDATA[]]>`标签注入
+> 在某些场景下，XML标签节点的value域内需要包含XML语法关键字符。这时就需要通过JAXWS组件向CXF声明包含CDATA标签的XML字段内容。框架已经对该问题提供了组装好的拦截器来实现。具体代码样例如下：
+
+```java
+@WebService(targetNamespace = "http://www.e-chinalife.com/soa/")
+@OutInterceptors(classes = {ServiceCDATAOutboundImpl.class})
+public interface SoapService {
+    boolean addUser(UserInfo user);
+}
+```
+
+如上所示，在添加了`@OutInterceptors(classes = {ServiceCDATAOutboundImpl.class})
+`后，框架会通过cxf拦截器，对发送报文的每个字段进行关键字符匹配，如果监测到字段中包含关键字符（`>`, `<`, `'`, `"`, `&`）,就会自动在当前XML节点的value域添加`<![CDATA[]]>`标签。
+
+2. `WRAPPED`与`BARED`
+SOAP1.2规范中允许请求/响应报文的业务数据内容是否被构造的根结点包裹。默认情况下，CXF使用的是`WRAPPED`模式，请求和响应报文会根据Java的interface声明情况，自动将请求和返回报文的业务数据部分通过一个XML根节点包裹。如果想变更这种模式，可以参考一下代码：
+
+```java
+@WebService(targetNamespace = "http://www.e-chinalife.com/soa/")
+@SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
+public interface SoapService {
+    boolean addUser(UserInfo user);
+}
+```
+
+
+
+
+
+
+
+
+
