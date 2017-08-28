@@ -14,8 +14,8 @@
 * [SOAP服务集成](服务集成/SOAP服务集成.md)
 * [REST服务集成](服务集成/REST服务集成.md)
 * [DASC服务集成](服务集成/DASC服务集成.md)
-* [DASC服务监控](服务集成/DASC服务监控.md)
-* [Multitask服务集成](服务集成/Multitask服务集成.md)
+* [DASC服务监控 \(TODO\)](服务集成/DASC服务监控.md)
+* [Multitask服务集成  \(TODO\)](服务集成/Multitask服务集成.md)
 
 ## 数据访问
 
@@ -34,8 +34,8 @@
 
 ## 消息交互
 
-* [rabbitmq消息支持](消息交互/rabbitmq消息支持.md)
-* [kafka消息支持](消息交互/kafka消息支持.md)
+* [rabbitmq消息支持  \(TODO\)](消息交互/rabbitmq消息支持.md)
+* [kafka消息支持  \(TODO\)](消息交互/kafka消息支持.md)
 * [Web消息通知](消息交互/Web消息通知.md)
 
 ## 调度跟踪
