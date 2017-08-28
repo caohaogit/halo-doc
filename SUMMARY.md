@@ -5,7 +5,7 @@
   * [组件清单](介绍/组件清单.md)
   * [配置清单](介绍/配置清单.md)
 * [版本记录](/版本记录.md)
-* [Spring集成](/Spring集成.md)
+* [Spring-Framework集成](/Spring-Framework集成.md)
 * [Web交互](/Web交互.md)
 
 ## 服务集成
