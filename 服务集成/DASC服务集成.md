@@ -1,20 +1,20 @@
-### DASC
+## DASC服务集成
 
 DASC是Halo作者基于MQ（消息队列）开发的一套在分布式应用环境下，能够保证数据最终一致性的异步服务调用框架。基于ebay模式，是业内针对数据最终一致性上较为规范成熟的设计理念。
 
-#### 组件依赖关系
+### 组件依赖关系
 
 DASC是一套多组件支撑的框架体系。对于DASC所需要的halo组件依赖关系如下图：
 
 ![](/assets/07.组件依赖关系.png)
 
-#### 使用方法
+### 使用方法
 
-##### 配置项修改
+#### 配置项修改
 
 与DASC服务有关的配置文件为”dasc.properties”, “cache.properties”, “mqconfig.properties”。其中详细的配置项参考【配置清单】小节。需要开发者保证当前工程对消息队列和缓存的连通性。对于”dasc.properties”需要保证两个服务调用地址的IP与当前工程的所在网络IP一致。
 
-##### 服务接口编写
+#### 服务接口编写
 
 DASC服务CXF服务不同，不需要通过服务接口挂接任何规范的注解。只要能保证符合Java接口定义即可。但是接口方法的入参和返回值要保证实现了Serializable序列化。
 
@@ -49,7 +49,7 @@ public interface DascService {
 
 ```
 
-##### 服务实现编写
+#### 服务实现编写
 
 与服务接口开发类似，服务实现类与普通的Spring服务编写方法相同。服务实现类统一放在“XXX-service-app”工程的“com.newcore.XXX.service.impl”中。
 
@@ -85,7 +85,7 @@ public class DascServiceImpl implements DascService {
 }
 ```
 
-##### 服务发布
+#### 服务发布
 
 DASC服务已经通过XSD做了Spring的协议封装。可以通过Spring配置文件来发布DASC服务。具体发布代码如下：
 
@@ -113,7 +113,7 @@ DASC服务已经通过XSD做了Spring的协议封装。可以通过Spring配置�
 | retry | 必填 |  | 允许服务处理相同请求消息异常的最大重试次数。 |
 | persistent | 选填 | true | 服务调用产生的返回值\(returnValue\)， 1. 是否允许尝试附加在消息体中，通过MQ发送（persistent=false），2. 是否需要持久化到数据库（或缓存）中，以供DASC客户端获取（persistent=true） |
 
-##### 客户端声明
+#### 客户端声明
 
 与CXF的客户端声明方式类似，由于DASC框架本质上是一个RPC里面的框架，因此在调用DASC服务前，需要在调用方的XML配置文件中声明服务调用的客户端存根。代码如下：
 
@@ -143,7 +143,7 @@ DASC服务已经通过XSD做了Spring的协议封装。可以通过Spring配置�
 | retry | 选填 | -1 | 允许服务处理相同返回值消息异常的最大重试次数。 |
 | persistent | 选填 | true | 调用服务时所需的参数列表\(args\)，1. 是否允许尝试附加在消息体中，通过MQ发送（persistent=false），2. 是否需要持久化到数据库（或缓存）中，以供DASC服务端获取（persistent=true） |
 
-##### 服务调用
+#### 服务调用
 
 在声明好DASC服务客户端后，就可以在工程中以普通Spring注入的方式来调用DASC服务。不过与CXF不同的是，需要在使用客户端调用DASC服务的方法体声明上，添加[@AsynCall](http://localhost:3000/AsynCall)注解。整个过程对于业务代码的视角来看，是察觉不到调用了远程服务的。
 
