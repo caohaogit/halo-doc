@@ -7,11 +7,6 @@
 * [版本记录](/版本记录.md)
 * [Spring集成](/Spring集成.md)
 * [远程服务集成](RPC服务集成/README.md)
-  * [CXF配置](RPC服务集成/CXF配置.md)
-  * [SOAP服务集成](RPC服务集成/SOAP服务集成.md)
-  * [REST服务集成](RPC服务集成/REST服务集成.md)
-  * [DASC服务集成](RPC服务集成/DASC服务集成.md)
-  * [DASC服务监控](RPC服务集成/DASC服务监控.md)
 * [Web交互](/Web交互.md)
 * [认证与授权](/认证与授权.md)
 * [文件管理](/文件管理.md)
@@ -22,10 +17,19 @@
 * [其他功能](/其他功能.md)
 * [重要扩展插件](/重要扩展插件.md)
 
+## 服务集成
+
+* [概述](服务集成/概述.md)
+* [CXF配置](RPC服务集成/CXF配置.md)
+* [SOAP服务集成](RPC服务集成/SOAP服务集成.md)
+* [REST服务集成](RPC服务集成/REST服务集成.md)
+* [DASC服务集成](RPC服务集成/DASC服务集成.md)
+* [DASC服务监控](RPC服务集成/DASC服务监控.md)
+
 ## 消息交互
 
-* RabbitMQ消息支持
-* Kafka消息支持
+* [rabbitmq消息支持](消息交互/rabbitmq消息支持.md)
+* [kafka消息支持](消息交互/kafka消息支持.md)
 * [Web消息通知](消息交互/Web消息通知.md)
 
 ## 一致性协作
