@@ -100,3 +100,5 @@ REST服务客户端的声明方式与SOAP服务客户端声明形式类似。都
 RestfulService restfulService;
 ```
 
+
+
