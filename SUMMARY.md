@@ -20,11 +20,11 @@
 ## 服务集成
 
 * [概述](服务集成/概述.md)
-* [CXF配置](RPC服务集成/CXF配置.md)
-* [SOAP服务集成](RPC服务集成/SOAP服务集成.md)
-* [REST服务集成](RPC服务集成/REST服务集成.md)
-* [DASC服务集成](RPC服务集成/DASC服务集成.md)
-* [DASC服务监控](RPC服务集成/DASC服务监控.md)
+* [CXF配置](服务集成/CXF配置.md)
+* [SOAP服务集成](服务集成/SOAP服务集成.md)
+* [REST服务集成](服务集成/REST服务集成.md)
+* [DASC服务集成](服务集成/DASC服务集成.md)
+* [DASC服务监控](服务集成/DASC服务监控.md)
 
 ## 消息交互
 
